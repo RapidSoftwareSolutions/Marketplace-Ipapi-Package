@@ -2,11 +2,11 @@
 
 # Ipapi Package
 Look up IP addresses by geographical location.
-* Domain: ipapi.co
+* Domain: [Ipapi](https://ipapi.co)
 * Credentials: 
 
 ## How to get credentials: 
-0. Free version does not require any credentials
+0. Free version version does not require credentials or registration.
 
 ## Ipapi.getIPAddressLocation
 This endpoint retrieves location for the IP address specified
