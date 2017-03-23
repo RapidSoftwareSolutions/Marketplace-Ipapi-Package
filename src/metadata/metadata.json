@@ -1,0 +1,104 @@
+{
+  "package": "Ipapi",
+  "tagline": "Ipapi API",
+  "description": "Look up IP addresses by geographical location.",
+  "image": "http:\/\/logo.clearbit.com\/ipapi.co",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Ipapi-Package",
+  "keywords": [
+  ],
+  "accounts": {
+    "domain": "ipapi.co",
+    "credentials": [
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getIPAddressLocation",
+      "description": "This endpoint retrieves location for the IP address specified",
+      "args": [
+        {
+          "name": "ipAddress",
+          "type": "String",
+          "info": "IP address",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getMyIPAddressLocation",
+      "description": "This endpoint retrieves location for your IP address.",
+      "args": [
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleInfoForIP",
+      "description": "This endpoint retrieves a specific location field for the IP address provided in the URL.",
+      "args": [
+        {
+          "name": "ipAddress",
+          "type": "String",
+          "info": "IP address",
+          "required": true
+        },
+        {
+          "name": "fieldName",
+          "type": "String",
+          "info": "Possible values: ip, city, region, country, postal, latitude, longitude, timezone, latlong",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleInfoForMyIP",
+      "description": "This endpoint retrieves a specific location field for your IP address.",
+      "args": [
+        {
+          "name": "fieldName",
+          "type": "String",
+          "info": "Possible values: ip, city, region, country, postal, latitude, longitude, timezone, latlong",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
