@@ -11,7 +11,7 @@ $app->post('/api/Ipapi/getMyIPAddressLocation', function ($request, $response, $
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $ipaddress = $_SERVER['REMOTE_ADDR'];
+    $ipaddress = $request->getAttribute('ip_address');
     $query_str = $settings['api_url'] . $ipaddress."/json/";
 
     //requesting remote API
