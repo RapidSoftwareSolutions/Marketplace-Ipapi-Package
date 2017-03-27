@@ -12,8 +12,6 @@ $app->post('/api/Ipapi/getMyIPAddressLocation', function ($request, $response, $
     }
     //forming request to vendor API
     $ipaddress = $request->getAttribute('ip_address');
-    var_dump($_SERVER);
-    exit();
 
     $query_str = $settings['api_url'] . $ipaddress . "/json/";
 
@@ -29,7 +27,7 @@ $app->post('/api/Ipapi/getMyIPAddressLocation', function ($request, $response, $
         $rawBody = json_decode($resp->getBody());
         $errorSet = $rawBody->error;
 
-        $all_data[] = $rawBody;
+        $all_data[] = $_SERVER;
         if ($response->getStatusCode() == '200' && $errorSet === null) {
             $result['callback'] = 'success';
             $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
