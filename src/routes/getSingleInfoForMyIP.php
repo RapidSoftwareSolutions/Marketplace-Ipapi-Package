@@ -11,7 +11,7 @@ $app->post('/api/Ipapi/getSingleInfoForMyIP', function ($request, $response, $ar
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $ipaddress = $_SERVER["HTTP_CF_CONNECTING_IP"];
+    $ipaddress = $_SERVER['REMOTE_ADDR'];
     $query_str = $settings['api_url'] . $ipaddress . "/" . $post_data['args']['fieldName'] . "/";
 
     //requesting remote API
