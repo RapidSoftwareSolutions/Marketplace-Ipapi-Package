@@ -11,7 +11,8 @@ $app->post('/api/Ipapi/getSingleInfoForMyIP', function ($request, $response, $ar
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'] . $post_data['args']['fieldName'];
+    $ipaddress = getenv('HTTP_CLIENT_IP');
+    $query_str = $settings['api_url'] . $ipaddress . "/" . $post_data['args']['fieldName'] . "/";
 
     //requesting remote API
     $client = new GuzzleHttp\Client();

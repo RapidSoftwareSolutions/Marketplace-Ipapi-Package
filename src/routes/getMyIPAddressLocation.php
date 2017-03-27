@@ -11,7 +11,8 @@ $app->post('/api/Ipapi/getMyIPAddressLocation', function ($request, $response, $
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'] . "json/";
+    $ipaddress = getenv('HTTP_CLIENT_IP');
+    $query_str = $settings['api_url'] . $ipaddress."/json/";
 
     //requesting remote API
     $client = new GuzzleHttp\Client();
