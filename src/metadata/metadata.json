@@ -62,7 +62,8 @@
         },
         {
           "name": "fieldName",
-          "type": "String",
+          "type": "Select",
+          "options": ["ip", "city", "region", "country", "postal", "latitude", "longitude", "timezone", "latlong"],
           "info": "Possible values: ip, city, region, country, postal, latitude, longitude, timezone, latlong",
           "required": true
         }
@@ -84,7 +85,8 @@
       "args": [
         {
           "name": "fieldName",
-          "type": "String",
+          "type": "Select",
+          "options": ["ip", "city", "region", "country", "postal", "latitude", "longitude", "timezone", "latlong"],
           "info": "Possible values: ip, city, region, country, postal, latitude, longitude, timezone, latlong",
           "required": true
         }
